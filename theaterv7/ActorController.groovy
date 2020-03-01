@@ -1,8 +1,10 @@
 package theaterv7
 
+import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 class ActorController {
 
     ActorService actorService
